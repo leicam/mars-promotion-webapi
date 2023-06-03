@@ -1,7 +1,7 @@
 using Mars.Promocao.IoC;
 using SimpleInjector;
 
-namespace Mars.Promocao.Gerador.Codigo
+namespace Mars.Promocao.Apresentacao
 {
     public class Program
     {

@@ -7,14 +7,14 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["Mars.Promocao.Gerador.Codigo/Mars.Promocao.Apresentacao.csproj", "Mars.Promocao.Gerador.Codigo/"]
+COPY ["Mars.Promocao.Gerador.Codigo/Mars.Promocao.Gerador.Codigo/Mars.Promocao.Apresentacao.csproj", "Mars.Promocao.Gerador.Codigo/"]
 COPY ["Mars.Promocao.Dominio/Mars.Promocao.Dominio.csproj", "Mars.Promocao.Dominio/"]
 COPY ["Mars.Promocao.DTO/Mars.Promocao.DTO.csproj", "Mars.Promocao.DTO/"]
 COPY ["Mars.Promocao.IoC/Mars.Promocao.IoC.csproj", "Mars.Promocao.IoC/"]
 COPY ["Mars.Promocao.Servicos/Mars.Promocao.Servicos.csproj", "Mars.Promocao.Servicos/"]
 RUN dotnet restore "Mars.Promocao.Gerador.Codigo/Mars.Promocao.Apresentacao.csproj"
 COPY . .
-WORKDIR "/src/Mars.Promocao.Gerador.Codigo"
+WORKDIR "/src/Mars.Promocao.Gerador.Codigo/"
 RUN dotnet build "Mars.Promocao.Apresentacao.csproj" -c Release -o /app/build
 
 FROM build AS publish

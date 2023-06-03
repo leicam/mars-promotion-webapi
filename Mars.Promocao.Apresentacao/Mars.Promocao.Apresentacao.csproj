@@ -1,10 +1,10 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>bbd5323b-8abb-41f6-ac0d-21434d6bdadc</UserSecretsId>
+    <UserSecretsId>5d9b88ee-4c0f-4507-b04f-84e564696ecc</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
   </PropertyGroup>
 
@@ -12,13 +12,15 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="6.0.16" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.18.1" />
     <PackageReference Include="SimpleInjector" Version="5.4.1" />
-    <PackageReference Include="SimpleInjector.Integration.AspNetCore" Version="5.4.0" />
     <PackageReference Include="SimpleInjector.Integration.AspNetCore.Mvc" Version="5.4.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Mars.Promocao.Dominio\Mars.Promocao.Dominio.csproj" />
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Mars.Promocao.IoC\Mars.Promocao.IoC.csproj" />
   </ItemGroup>
 
