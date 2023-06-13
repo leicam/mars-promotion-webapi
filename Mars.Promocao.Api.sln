@@ -25,8 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mars.Promocao.Servico.Teste
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mars.Promocao.Apresentacao", "Mars.Promocao.Apresentacao\Mars.Promocao.Apresentacao.csproj", "{402E840C-6FAD-45D2-B6A5-75452CB7139A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{1CFB8CA3-5723-497B-BE87-48BE298E70CB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{1CFB8CA3-5723-497B-BE87-48BE298E70CB}"
 	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
 		Dockerfile = Dockerfile
 	EndProjectSection
 EndProject

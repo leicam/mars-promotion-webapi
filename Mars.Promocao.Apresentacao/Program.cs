@@ -17,6 +17,17 @@ namespace Mars.Promocao.Apresentacao
 
             builder.Services.AddControllers().AddNewtonsoftJson();
 
+            builder.Services.AddCors(options =>
+            {
+                options.AddDefaultPolicy(builder =>
+                {
+                    builder
+                        .AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
+
             builder.Services.AddAuthentication(options =>
             {
                 options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -48,6 +59,7 @@ namespace Mars.Promocao.Apresentacao
 
             var app = builder.Build();
 
+            app.UseCors();
             app.Services.UseSimpleInjector(container);
             container.Verify();
 
